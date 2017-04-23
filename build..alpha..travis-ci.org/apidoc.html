@@ -1,0 +1,913 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/th0r/npm-upgrade"
+
+    >npm-upgrade (v1.0.2)</a>
+</h1>
+<h4>Interactive CLI utility to easily update outdated NPM dependencies</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade">module npm-upgrade</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>Config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>askUser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>catchAsyncError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>cliStyles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>cliTable</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>filterUtils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>ignore</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>list</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>repositoryUtils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-upgrade.</span>reset</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.Config">module npm-upgrade.Config</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.Config.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.Config.default">
+            function <span class="apidocSignatureSpan">npm-upgrade.Config.</span>default
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.askUser">module npm-upgrade.askUser</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.askUser.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.askUser.default">
+            function <span class="apidocSignatureSpan">npm-upgrade.askUser.</span>default
+            <span class="apidocSignatureSpan">(_x)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.catchAsyncError">module npm-upgrade.catchAsyncError</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.catchAsyncError.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.catchAsyncError.default">
+            function <span class="apidocSignatureSpan">npm-upgrade.catchAsyncError.</span>default
+            <span class="apidocSignatureSpan">(asyncFn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.cliStyles">module npm-upgrade.cliStyles</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.cliStyles.attention">
+            function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>attention
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.cliStyles.strong">
+            function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>strong
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.cliStyles.success">
+            function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>success
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.cliTable">module npm-upgrade.cliTable</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.cliTable.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.cliTable.createSimpleTable">
+            function <span class="apidocSignatureSpan">npm-upgrade.cliTable.</span>createSimpleTable
+            <span class="apidocSignatureSpan">(rows)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.filterUtils">module npm-upgrade.filterUtils</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.filterUtils.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.filterUtils.globToRegexp">
+            function <span class="apidocSignatureSpan">npm-upgrade.filterUtils.</span>globToRegexp
+            <span class="apidocSignatureSpan">(glob, flags)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.filterUtils.makeFilterFunction">
+            function <span class="apidocSignatureSpan">npm-upgrade.filterUtils.</span>makeFilterFunction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.ignore">module npm-upgrade.ignore</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.ignore.askIgnoreFields">
+            function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>askIgnoreFields
+            <span class="apidocSignatureSpan">(_x2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.ignore.builder">
+            function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>builder
+            <span class="apidocSignatureSpan">(yargs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.ignore.createIgnoredModulesTable">
+            function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>createIgnoredModulesTable
+            <span class="apidocSignatureSpan">(ignoredModulesConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.ignore.handler">
+            function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>handler
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>command</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>describe</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.list">module npm-upgrade.list</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.list.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.list.handler">
+            function <span class="apidocSignatureSpan">npm-upgrade.list.</span>handler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.list.</span>command</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.list.</span>describe</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.repositoryUtils">module npm-upgrade.repositoryUtils</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.repositoryUtils.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.repositoryUtils.getRepositoryInfo">
+            function <span class="apidocSignatureSpan">npm-upgrade.repositoryUtils.</span>getRepositoryInfo
+            <span class="apidocSignatureSpan">(repositoryUrl)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-upgrade.reset">module npm-upgrade.reset</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">npm-upgrade.reset.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-upgrade.reset.handler">
+            function <span class="apidocSignatureSpan">npm-upgrade.reset.</span>handler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.reset.</span>command</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">npm-upgrade.reset.</span>describe</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade" id="apidoc.module.npm-upgrade">module npm-upgrade</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.Config" id="apidoc.module.npm-upgrade.Config">module npm-upgrade.Config</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.Config.default" id="apidoc.element.npm-upgrade.Config.default">
+        function <span class="apidocSignatureSpan">npm-upgrade.Config.</span>default
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Config(opts) {
+  (0, _classCallCheck3.default)(this, Config);
+
+  var _ref = opts || {},
+      projectRoot = _ref.projectRoot;
+
+  this[path] = (0, _path.resolve)(projectRoot || process.cwd(), PROJECT_CONFIG_FILENAME);
+  this[storedData] = this[read]();
+  _lodash2.default.assign(this, _lodash2.default.cloneDeep(this[storedData]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (opts.colAligns) {
+  opts.colAligns = opts.colAligns.split(&#x27;&#x27;).map(function (val) {
+    return COL_ALIGNS_MAP[val];
+  });
+}
+
+var table = new _cliTable2.<span class="apidocCodeKeywordSpan">default</span>((0, _extends3.default)({
+  style: { &#x27;padding-left&#x27;: 2 },
+  colAligns: [&#x27;left&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;middle&#x27;],
+  chars: {
+    &#x27;top&#x27;: &#x27;&#x27;,
+    &#x27;top-mid&#x27;: &#x27;&#x27;,
+    &#x27;top-left&#x27;: &#x27;&#x27;,
+    &#x27;top-right&#x27;: &#x27;&#x27;,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.askUser" id="apidoc.module.npm-upgrade.askUser">module npm-upgrade.askUser</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.askUser.default" id="apidoc.element.npm-upgrade.askUser.default">
+        function <span class="apidocSignatureSpan">npm-upgrade.askUser.</span>default
+        <span class="apidocSignatureSpan">(_x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askUser(_x) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (opts.colAligns) {
+  opts.colAligns = opts.colAligns.split(&#x27;&#x27;).map(function (val) {
+    return COL_ALIGNS_MAP[val];
+  });
+}
+
+var table = new _cliTable2.<span class="apidocCodeKeywordSpan">default</span>((0, _extends3.default)({
+  style: { &#x27;padding-left&#x27;: 2 },
+  colAligns: [&#x27;left&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;middle&#x27;],
+  chars: {
+    &#x27;top&#x27;: &#x27;&#x27;,
+    &#x27;top-mid&#x27;: &#x27;&#x27;,
+    &#x27;top-left&#x27;: &#x27;&#x27;,
+    &#x27;top-right&#x27;: &#x27;&#x27;,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.catchAsyncError" id="apidoc.module.npm-upgrade.catchAsyncError">module npm-upgrade.catchAsyncError</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.catchAsyncError.default" id="apidoc.element.npm-upgrade.catchAsyncError.default">
+        function <span class="apidocSignatureSpan">npm-upgrade.catchAsyncError.</span>default
+        <span class="apidocSignatureSpan">(asyncFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function catchAsyncError(asyncFn) {
+  return function () {
+    return asyncFn.apply(this, arguments).catch(function (err) {
+      console.error(err);
+      process.exit(1);
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (opts.colAligns) {
+  opts.colAligns = opts.colAligns.split(&#x27;&#x27;).map(function (val) {
+    return COL_ALIGNS_MAP[val];
+  });
+}
+
+var table = new _cliTable2.<span class="apidocCodeKeywordSpan">default</span>((0, _extends3.default)({
+  style: { &#x27;padding-left&#x27;: 2 },
+  colAligns: [&#x27;left&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;middle&#x27;],
+  chars: {
+    &#x27;top&#x27;: &#x27;&#x27;,
+    &#x27;top-mid&#x27;: &#x27;&#x27;,
+    &#x27;top-left&#x27;: &#x27;&#x27;,
+    &#x27;top-right&#x27;: &#x27;&#x27;,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.cliStyles" id="apidoc.module.npm-upgrade.cliStyles">module npm-upgrade.cliStyles</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.cliStyles.attention" id="apidoc.element.npm-upgrade.cliStyles.attention">
+        function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>attention
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attention = function () {
+		return applyStyle.apply(builder, arguments);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.cliStyles.strong" id="apidoc.element.npm-upgrade.cliStyles.strong">
+        function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>strong
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">strong = function () {
+		return applyStyle.apply(builder, arguments);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.cliStyles.success" id="apidoc.element.npm-upgrade.cliStyles.success">
+        function <span class="apidocSignatureSpan">npm-upgrade.cliStyles.</span>success
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">success = function () {
+		return applyStyle.apply(builder, arguments);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.cliTable" id="apidoc.module.npm-upgrade.cliTable">module npm-upgrade.cliTable</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.cliTable.createSimpleTable" id="apidoc.element.npm-upgrade.cliTable.createSimpleTable">
+        function <span class="apidocSignatureSpan">npm-upgrade.cliTable.</span>createSimpleTable
+        <span class="apidocSignatureSpan">(rows)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSimpleTable(rows) {
+  var opts = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+
+  if (opts.colAligns) {
+    opts.colAligns = opts.colAligns.split(&#x27;&#x27;).map(function (val) {
+      return COL_ALIGNS_MAP[val];
+    });
+  }
+
+  var table = new _cliTable2.default((0, _extends3.default)({
+    style: { &#x27;padding-left&#x27;: 2 },
+    colAligns: [&#x27;left&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;right&#x27;, &#x27;middle&#x27;],
+    chars: {
+      &#x27;top&#x27;: &#x27;&#x27;,
+      &#x27;top-mid&#x27;: &#x27;&#x27;,
+      &#x27;top-left&#x27;: &#x27;&#x27;,
+      &#x27;top-right&#x27;: &#x27;&#x27;,
+      &#x27;bottom&#x27;: &#x27;&#x27;,
+      &#x27;bottom-mid&#x27;: &#x27;&#x27;,
+      &#x27;bottom-left&#x27;: &#x27;&#x27;,
+      &#x27;bottom-right&#x27;: &#x27;&#x27;,
+      &#x27;left&#x27;: &#x27;&#x27;,
+      &#x27;left-mid&#x27;: &#x27;&#x27;,
+      &#x27;mid&#x27;: &#x27;&#x27;,
+      &#x27;mid-mid&#x27;: &#x27;&#x27;,
+      &#x27;right&#x27;: &#x27;&#x27;,
+      &#x27;right-mid&#x27;: &#x27;&#x27;,
+      &#x27;middle&#x27;: &#x27;&#x27;
+    }
+  }, opts));
+
+  if (rows) {
+    table.push.apply(table, rows);
+  }
+
+  return table;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.filterUtils" id="apidoc.module.npm-upgrade.filterUtils">module npm-upgrade.filterUtils</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.filterUtils.globToRegexp" id="apidoc.element.npm-upgrade.filterUtils.globToRegexp">
+        function <span class="apidocSignatureSpan">npm-upgrade.filterUtils.</span>globToRegexp
+        <span class="apidocSignatureSpan">(glob, flags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function globToRegexp(glob, flags) {
+  var regexp = glob.split(/\*+/).map(_lodash2.default.escapeRegExp).join(&#x27;.*?&#x27;);
+
+  return new RegExp(`^${regexp}$`, flags);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.filterUtils.makeFilterFunction" id="apidoc.element.npm-upgrade.filterUtils.makeFilterFunction">
+        function <span class="apidocSignatureSpan">npm-upgrade.filterUtils.</span>makeFilterFunction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeFilterFunction() {
+  var filterStr = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : &#x27;&#x27;;
+
+  var _$split$compact$parti = (0, _lodash2.default)(filterStr).split(/\s+/).compact().partition(function (filter) {
+    return filter[0] === &#x27;!&#x27;;
+  }).valueOf(),
+      excludeFilters = _$split$compact$parti[0],
+      includeFilters = _$split$compact$parti[1];
+
+  if (!includeFilters.length) {
+    includeFilters.push(&#x27;*&#x27;);
+  }
+
+  includeFilters = (0, _lodash2.default)(includeFilters).map(function (filter) {
+    return globToRegexp(filter, &#x27;i&#x27;);
+  }).map(function (filterRegexp) {
+    return function (str) {
+      return filterRegexp.test(str);
+    };
+  });
+
+  excludeFilters = (0, _lodash2.default)(excludeFilters).map(function (filter) {
+    return globToRegexp(filter.slice(1), &#x27;i&#x27;);
+  }).map(function (filterRegexp) {
+    return function (str) {
+      return filterRegexp.test(str);
+    };
+  });
+
+  return function (str) {
+    return excludeFilters.every(function (filter) {
+      return !filter(str);
+    }) &#x26;&#x26; includeFilters.some(function (filter) {
+      return filter(str);
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.ignore" id="apidoc.module.npm-upgrade.ignore">module npm-upgrade.ignore</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.ignore.askIgnoreFields" id="apidoc.element.npm-upgrade.ignore.askIgnoreFields">
+        function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>askIgnoreFields
+        <span class="apidocSignatureSpan">(_x2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askIgnoreFields(_x2) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.ignore.builder" id="apidoc.element.npm-upgrade.ignore.builder">
+        function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>builder
+        <span class="apidocSignatureSpan">(yargs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function builder(yargs) {
+  return yargs.commandDir(&#x27;ignore&#x27;).demandCommand(1, &#x27;Provide valid command&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.ignore.createIgnoredModulesTable" id="apidoc.element.npm-upgrade.ignore.createIgnoredModulesTable">
+        function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>createIgnoredModulesTable
+        <span class="apidocSignatureSpan">(ignoredModulesConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createIgnoredModulesTable(ignoredModulesConfig) {
+  var moduleNames = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : _lodash2.default.keys(ignoredModulesConfig
+);
+
+  var rows = moduleNames.map(function (moduleName) {
+    return [(0, _cliStyles.strong)(moduleName), (0, _cliStyles.attention)(ignoredModulesConfig[moduleName].versions), ignoredModulesConfig
+[moduleName].reason];
+  });
+
+  // Table header
+  rows.unshift([&#x27;&#x27;, &#x27;Ignored versions&#x27;, &#x27;Reason&#x27;].map(function (header) {
+    return (0, _cliStyles.strong)(header);
+  }));
+
+  return (0, _cliTable.createSimpleTable)(rows, { colAligns: &#x27;lcl&#x27; });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.ignore.handler" id="apidoc.element.npm-upgrade.ignore.handler">
+        function <span class="apidocSignatureSpan">npm-upgrade.ignore.</span>handler
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handler(opts) {
+  console.log(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.list" id="apidoc.module.npm-upgrade.list">module npm-upgrade.list</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.list.handler" id="apidoc.element.npm-upgrade.list.handler">
+        function <span class="apidocSignatureSpan">npm-upgrade.list.</span>handler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handler = function () {
+  return asyncFn.apply(this, arguments).catch(function (err) {
+    console.error(err);
+    process.exit(1);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.repositoryUtils" id="apidoc.module.npm-upgrade.repositoryUtils">module npm-upgrade.repositoryUtils</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.repositoryUtils.getRepositoryInfo" id="apidoc.element.npm-upgrade.repositoryUtils.getRepositoryInfo">
+        function <span class="apidocSignatureSpan">npm-upgrade.repositoryUtils.</span>getRepositoryInfo
+        <span class="apidocSignatureSpan">(repositoryUrl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRepositoryInfo(repositoryUrl) {
+  var parsedUrl = (0, _url.parse)(repositoryUrl);
+  var hostname = parsedUrl.hostname;
+
+
+  return _lodash2.default.has(KNOWN_REPOSITORIES, hostname) ? KNOWN_REPOSITORIES[hostname](parsedUrl) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-upgrade.reset" id="apidoc.module.npm-upgrade.reset">module npm-upgrade.reset</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-upgrade.reset.handler" id="apidoc.element.npm-upgrade.reset.handler">
+        function <span class="apidocSignatureSpan">npm-upgrade.reset.</span>handler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">handler = function () {
+  return asyncFn.apply(this, arguments).catch(function (err) {
+    console.error(err);
+    process.exit(1);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
